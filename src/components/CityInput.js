@@ -1,8 +1,8 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 
 const CityInput = ({city, setCity, fetchCityWeather}) => {
-    const [error, setError] = React.useState("");
+    const [error, setError] = useState("");
 
 
     const handleInputChange = (event) => {
@@ -11,7 +11,7 @@ const CityInput = ({city, setCity, fetchCityWeather}) => {
     }
     //console.log("city is", city);
     const handleSubmit = () => {
-    // write logic to see if city field is empty
+    // logic to see if city field is empty
         if(!city) {
             setError("City field is empty");
         } else {
@@ -21,7 +21,15 @@ const CityInput = ({city, setCity, fetchCityWeather}) => {
         }
     }
     return (
-        
+        <div>
+            <div>
+                <label>
+                <input value={city} type="text" placeholder="Enter city" onChange= {handleInputChange}/>
+                </label>
+                <p>{error}</p>
+            </div>
+            <button onClick={handleSubmit}>Find</button>
+        </div>
     );
 };
 
