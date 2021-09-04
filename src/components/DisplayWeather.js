@@ -1,8 +1,18 @@
 import React from 'react';
 
 const DisplayWeather = ({cityWeather}) => {
+    let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     return (
         <div>
+            <h3>{cityWeather.name}</h3>
+            <p>{weekday[(new Date()).getDay()]}</p>
+            <p>
+            <span><img src={`http://openweathermap.org/img/wn/${cityWeather.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/></span>
+            </p>
+            <p>
+                <span>{cityWeather.weather[0].description}</span>
+            </p>
+            
             <p>
                 <span>temp: </span>
                 <span>{cityWeather.main.temp} C</span>
@@ -12,22 +22,10 @@ const DisplayWeather = ({cityWeather}) => {
                 <span>{cityWeather.main.humidity} %</span>
             </p>
             <p>
-                <span>pressure: </span>
-                <span>{cityWeather.main.pressure} mbar</span>
-            </p>
-            <p>
                 <span>wind speed: </span>
                 <span>{cityWeather.wind.speed} m/s</span>
             </p>
-            <p>
-                <span>weather main: </span>
-                <span>{cityWeather.weather[0].main}</span>
-                <spna>{cityWeather.weather[0].icon}</spna>
-            </p>
-            <p>
-                <span>weather description: </span>
-                <span>{cityWeather.weather[0].description}</span>
-            </p>
+            
         </div>
     );
 };

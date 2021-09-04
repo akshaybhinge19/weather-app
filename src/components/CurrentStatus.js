@@ -1,30 +1,28 @@
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 import React,{useState,useEffect} from 'react'
-import DateTime from './DateTime';
-import DisplayWeather from './DisplayWeather';
-
+import DisplayCurrentWeather from './DisplayCurrentWeather';
+import DisplayForcast from './DisplayForcast';
 function CurrentStatus() {
     const [currentWeather, setCurrentWeather] = useState([]);
     useEffect(()=>{
             navigator.geolocation.getCurrentPosition(function(position) {
                 let {latitude, longitude} = position.coords;
                 fetch(
-                    `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=749579295f49a09226fd9dacaeea6325`
+                    `http://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly&units=metric&appid=749579295f49a09226fd9dacaeea6325`
                     )
                     .then((response) => response.json())
                     .then((result) => {
-                        console.log("Result is", result.list[0]);
-                        setCurrentWeather(result.list[0]);
-                        // console.log(result.list.main.temp)
+                        console.log("Result is", result);
+                        setCurrentWeather(result);
+                        console.log(result.current.temp);
                     })
             });
     },[])
     
     return (
         <div>
-            <DateTime/>
-             
-            {currentWeather.main && <DisplayWeather cityWeather = {currentWeather} />}
+            {currentWeather.current && <DisplayCurrentWeather currentWeather = {currentWeather} />}
+            {currentWeather.daily && <DisplayForcast currentWeather = {currentWeather.daily} />}
         </div>
     )
 }

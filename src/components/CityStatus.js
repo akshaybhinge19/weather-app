@@ -18,6 +18,7 @@ export default function CurrentStatus() {
     }
     return (
         <div>
+            
             <CityInput city={city} setCity={setCity} fetchCityWeather={fetchCityWeather}/>
             {cityWeather && <DisplayWeather cityWeather = {cityWeather} />}
         </div>
