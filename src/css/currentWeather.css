@@ -1,0 +1,15 @@
+.current-contaner {
+  display: flex;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  justify-items: center;
+  align-items: center;
+  height: 20vh;
+  width: 80vw;
+  box-shadow: 0.5vw 0.5vw 0.5vw 0.5vw teal;
+  border-radius: 2vw;
+}
+.current-contaner div {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}

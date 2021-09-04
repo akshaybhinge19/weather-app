@@ -1,35 +1,26 @@
 import React from 'react';
 import DateTime from './DateTime';
+import '../css/currentWeather.css'
+
 const DisplayCurrentWeather = ({currentWeather}) => {
+    let description = currentWeather.current.weather[0].description;
     return (
-        <div>
-            <div className='container'>
-                <h3>Current Weather</h3>
-                <DateTime/>
+        <div className='current-contaner'>
+            <div className='sub-currect-container'>
+                <div><h3>Current Weather</h3></div>
+                <div>Timezone {currentWeather.timezone}
+                </div>
             </div>
-            <div>
-                {currentWeather.timezone}
-            </div>
+            <DateTime/>
             <div>
                 <img src={`http://openweathermap.org/img/wn/${currentWeather.current.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/>
+                <p>{description.charAt(0).toUpperCase() + description.slice(1)}</p>
             </div>
-            <div>
-                <span>{currentWeather.current.weather[0].description}</span>
+            <div className='current-details'>
+                <p>{currentWeather.current.temp}° </p>
+                <p>Humid:{currentWeather.current.humidity}%</p>
+                <p>Wind speed:{currentWeather.current.wind_speed}m/s </p>
             </div>
-            <div>
-                <span>temp: </span>
-                <span>{currentWeather.current.temp} C</span>
-            </div>
-            <div>
-                <span>humidity: </span>
-                <span>{currentWeather.current.humidity} %</span>
-            </div>
-            <div>
-                <span>wind speed: </span>
-                <span>{currentWeather.current.wind_speed} m/s</span>
-            </div>
-            
-            
         </div>
     );
 };

@@ -3,8 +3,6 @@ import React, {useState} from 'react';
 
 const CityInput = ({city, setCity, fetchCityWeather}) => {
     const [error, setError] = useState("");
-
-
     const handleInputChange = (event) => {
         setCity(event.target.value);
         
@@ -21,14 +19,12 @@ const CityInput = ({city, setCity, fetchCityWeather}) => {
         }
     }
     return (
-        <div>
-            <div>
-                <label>
-                <input value={city} type="text" placeholder="Enter city" onChange= {handleInputChange}/>
-                </label>
-                <p>{error}</p>
-            </div>
+        <div className='city-input'>
+            <label>
+            <input value={city} type="text" placeholder="Enter city" onChange= {handleInputChange}/>
+            </label>
             <button onClick={handleSubmit}>Find</button>
+            <p>{error}</p>            
         </div>
     );
 };

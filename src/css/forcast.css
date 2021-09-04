@@ -1,0 +1,23 @@
+.container-forcast {
+  display: flex;
+  margin-top: 5vh;
+}
+.container {
+  box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw slategrey;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  margin-right: 1vw;
+  text-align: center;
+}
+.container-forcast :hover {
+  transform: scale(1.1);
+}
+@media (max-width: 800px) {
+  .container-forcast {
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #403a3a;
+    margin: 10px;
+  }
+}

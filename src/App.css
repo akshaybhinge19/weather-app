@@ -1,0 +1,37 @@
+body {
+  height: 100vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#e66465, #9198e5);
+  color: whitesmoke;
+  font-family: "Piazzolla", serif;
+}
+:root,
+:root.light {
+  --bg-color: #fff;
+  --text-color: #123;
+}
+
+:root.dark {
+  --bg-color: #121212;
+  --text-color: #45adfe;
+}
+:root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 6vh;
+  display: block;
+}
+.container {
+  background: linear-gradient(#e66465, #9198e5);
+  color: whitesmoke;
+  font-family: "Piazzolla", serif;
+}

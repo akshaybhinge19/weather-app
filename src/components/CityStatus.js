@@ -2,7 +2,7 @@
 import React,{useState} from 'react'
 import DisplayWeather from './DisplayWeather'
 import CityInput from './CityInput';
-
+import '../css/citySearch.css'
 export default function CurrentStatus() {
     const [city, setCity] = useState("");
     const [cityWeather, setCityWeather] = useState("");
@@ -17,8 +17,7 @@ export default function CurrentStatus() {
         })
     }
     return (
-        <div>
-            
+        <div className="city-output">
             <CityInput city={city} setCity={setCity} fetchCityWeather={fetchCityWeather}/>
             {cityWeather && <DisplayWeather cityWeather = {cityWeather} />}
         </div>

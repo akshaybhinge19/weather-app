@@ -1,0 +1,42 @@
+.city-output {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 20vh;
+  width: 80vw;
+  box-shadow: 0.5vw 0.5vw 0.5vw 0.5vw teal;
+  border-radius: 2vw;
+}
+.city-input {
+  margin-right: 2vw;
+  margin-left: 2vw;
+}
+.search-result {
+  display: flex;
+}
+.search-result div {
+  margin-right: 5vw;
+}
+.search-weather {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  border-radius: 1vw;
+  font-size: 1.5vw;
+  padding: 0.5vw;
+  text-align: center;
+  font-family: "Piazzolla", serif;
+  text-transform: capitalize;
+}
+button {
+  margin: 1vw;
+  font-size: 1.5vw;
+  text-align: center;
+  font-family: "Piazzolla", serif;
+  border-radius: 0.5vw;
+}
+button:hover {
+  background-color: slategrey;
+  transform: scale(1.02);
+}

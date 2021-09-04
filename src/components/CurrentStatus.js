@@ -2,6 +2,7 @@
 import React,{useState,useEffect} from 'react'
 import DisplayCurrentWeather from './DisplayCurrentWeather';
 import DisplayForcast from './DisplayForcast';
+
 function CurrentStatus() {
     const [currentWeather, setCurrentWeather] = useState([]);
     useEffect(()=>{
@@ -22,6 +23,7 @@ function CurrentStatus() {
     return (
         <div>
             {currentWeather.current && <DisplayCurrentWeather currentWeather = {currentWeather} />}
+            
             {currentWeather.daily && <DisplayForcast currentWeather = {currentWeather.daily} />}
         </div>
     )

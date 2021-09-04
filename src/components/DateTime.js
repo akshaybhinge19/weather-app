@@ -10,10 +10,10 @@ function DateTime() {
         }
     });
     return (
-        <div>
-            <p>{date.toLocaleTimeString()}</p>
-            <p>{date.toLocaleDateString()}</p>
+        <div className='get-time'>
             <h4>{weekday[date.getDay()]}</h4>
+            <p>{date.toLocaleTimeString()}</p>
+            <p>{date.toLocaleDateString()}</p> 
         </div>
     )
 }

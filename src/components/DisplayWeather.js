@@ -3,29 +3,22 @@ import React from 'react';
 const DisplayWeather = ({cityWeather}) => {
     let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     return (
-        <div>
-            <h3>{cityWeather.name}</h3>
-            <p>{weekday[(new Date()).getDay()]}</p>
-            <p>
-            <span><img src={`http://openweathermap.org/img/wn/${cityWeather.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/></span>
-            </p>
-            <p>
-                <span>{cityWeather.weather[0].description}</span>
-            </p>
-            
-            <p>
-                <span>temp: </span>
-                <span>{cityWeather.main.temp} C</span>
-            </p>
-            <p>
-                <span>humidity: </span>
-                <span>{cityWeather.main.humidity} %</span>
-            </p>
-            <p>
-                <span>wind speed: </span>
-                <span>{cityWeather.wind.speed} m/s</span>
-            </p>
-            
+        <div className='search-result'>
+            <div>
+                <h3>{cityWeather.name}</h3>
+                <p>{cityWeather.main.temp}°</p>
+                <p>{weekday[(new Date()).getDay()]}</p>
+            </div>
+            <div className='search-weather'>
+                <img src={`http://openweathermap.org/img/wn/${cityWeather.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/>
+                {cityWeather.weather[0].description}
+            </div>
+
+            <div>
+                <p>Humid:{cityWeather.main.humidity} % </p>
+                <p>Wind speed:{cityWeather.wind.speed} m/s</p>
+                
+            </div>         
         </div>
     );
 };
