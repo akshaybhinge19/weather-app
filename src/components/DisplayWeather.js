@@ -10,7 +10,7 @@ const DisplayWeather = ({cityWeather}) => {
                 <p>{weekday[(new Date()).getDay()]}</p>
             </div>
             <div className='search-weather'>
-                <img src={`http://openweathermap.org/img/wn/${cityWeather.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/>
+                <img src={`https://openweathermap.org/img/wn/${cityWeather.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/>
                 {cityWeather.weather[0].description}
             </div>
 

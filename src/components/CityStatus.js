@@ -8,7 +8,7 @@ export default function CurrentStatus() {
     const [cityWeather, setCityWeather] = useState("");
     const fetchCityWeather =() => {
         fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=749579295f49a09226fd9dacaeea6325`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=749579295f49a09226fd9dacaeea6325`
         )
         .then((response) => response.json())
         .then((result) => {

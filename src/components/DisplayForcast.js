@@ -11,7 +11,7 @@ function DisplayForcast({currentWeather}) {
                     <div>{day.temp.max}°</div>
                 </div>
                 <div>
-                 <img src={`http://openweathermap.org/img/wn/${day.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/>
+                 <img src={`https://openweathermap.org/img/wn/${day.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/>
                 </div>
                 <div>{day.weather[0].description} </div>
                 

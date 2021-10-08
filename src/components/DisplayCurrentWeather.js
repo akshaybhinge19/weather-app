@@ -13,7 +13,7 @@ const DisplayCurrentWeather = ({currentWeather}) => {
             </div>
             <DateTime/>
             <div>
-                <img src={`http://openweathermap.org/img/wn/${currentWeather.current.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/>
+                <img src={`https://openweathermap.org/img/wn/${currentWeather.current.weather[0].icon.replace(/^"|"$/g, '')}@2x.png`} alt="weatherIcon" className="img-responsive"/>
                 <p>{description.charAt(0).toUpperCase() + description.slice(1)}</p>
             </div>
             <div className='current-details'>

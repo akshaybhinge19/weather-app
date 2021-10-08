@@ -9,7 +9,7 @@ function CurrentStatus() {
             navigator.geolocation.getCurrentPosition(function(position) {
                 let {latitude, longitude} = position.coords;
                 fetch(
-                    `http://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly&units=metric&appid=749579295f49a09226fd9dacaeea6325`
+                    `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly&units=metric&appid=749579295f49a09226fd9dacaeea6325`
                     )
                     .then((response) => response.json())
                     .then((result) => {
