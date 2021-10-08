@@ -4,7 +4,7 @@
   align-items: center;
   height: 20vh;
   width: 80vw;
-  box-shadow: 0.5vw 0.5vw 0.5vw 0.5vw teal;
+  box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw whitesmoke;
   border-radius: 2vw;
 }
 .city-input {
