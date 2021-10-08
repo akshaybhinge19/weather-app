@@ -13,9 +13,9 @@ function CurrentStatus() {
                     )
                     .then((response) => response.json())
                     .then((result) => {
-                        console.log("Result is", result);
+                        // console.log("Result is", result);
                         setCurrentWeather(result);
-                        console.log(result.current.temp);
+                        // console.log(result.current.temp);
                     })
             });
     },[])

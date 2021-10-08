@@ -2,7 +2,7 @@
 import './App.css';
 import CurrentStatus from './components/CurrentStatus';
 import CityStatus from './components/CityStatus'
-import React,{useState} from 'react'; 
+import React from 'react'; 
 
 function App() {
   return (
